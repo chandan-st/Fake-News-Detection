@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Detection</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container{
+            background: white;
+            width: 60%;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        textarea{
+            width: 90%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button{
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover{
+            background-color: darkblue;
+        }
+
+        .result{
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .metrics{
+            margin-top: 30px;
+            background: #eeeeee;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Fake News Detection System</h1>
+
+        <form method="POST">
+
+            <textarea name="news" placeholder="Enter News Text Here..." required>{{news}}</textarea>
+
+            <br>
+
+            <button type="submit">Predict News</button>
+
+        </form>
+
+        {% if prediction %}
+
+            <div class="result">
+                Prediction: {{ prediction }}
+            </div>
+
+        {% endif %}
+        {% if confidence %}
+<div class="metrics">
+    <h3>Confidence Score</h3>
+    <p>{{ confidence }}%</p>
+</div>
+{% endif %}
+
+        <div class="metrics">
+
+            <h2>Model Performance Metrics</h2>
+
+            <p><strong>Accuracy:</strong> {{ accuracy }}</p>
+            <p><strong>Precision:</strong> {{ precision }}</p>
+            <p><strong>Recall:</strong> {{ recall }}</p>
+            <p><strong>F1 Score:</strong> {{ f1_score }}</p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
