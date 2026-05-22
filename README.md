@@ -44,3 +44,69 @@ Fake-News-Detection/
 ├── static/
 ├── models/
 └── README.md
+
+⚙️ Installation
+
+1️⃣ Clone the Repository
+git clone https://github.com/chandan-st/Fake-News-Detection.git
+
+2️⃣ Navigate to Project Folder
+cd Fake-News-Detection
+
+3️⃣ Create Virtual Environment
+python -m venv venv
+
+4️⃣ Activate Virtual Environment
+Mac/Linux
+source venv/bin/activate
+Windows
+venv\Scripts\activate
+
+5️⃣ Install Dependencies
+pip install -r requirements.txt
+▶️ Run the Application
+python app.py
+The application will start on:
+http://127.0.0.1:5000
+🧠 Machine Learning Workflow
+
+1. Data Collection
+2. Data Preprocessing
+3. Text Cleaning
+4. TF-IDF Vectorization
+5. Model Training
+6. Prediction
+7. Web Deployment using Flask
+
+⸻
+
+📸 Output
+
+The system accepts a news article as input and predicts:
+
+* ✅ Real News
+* ❌ Fake News
+
+⸻
+
+📌 Future Enhancements
+
+* Deep Learning Integration
+* Real-time News API
+* Improved UI/UX
+* Multi-language Support
+* Deployment on Cloud
+
+⸻
+
+👨‍💻 Author
+
+Chandan S T
+
+GitHub: https://github.com/chandan-st
+
+⸻
+
+⭐ Support
+
+If you like this project, give it a ⭐ on GitHub.
